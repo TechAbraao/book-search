@@ -1,5 +1,5 @@
 // Buttons
-export { Button } from "./Buttons/Buttons";
+export { Button, GenderButton } from "./Buttons/Buttons";
 
 // Cards
 
@@ -11,4 +11,4 @@ export { BackgroundImage } from "./Images/BackgroundImage";
 // Logos
 
 // Texts
-export { MainText } from "./Texts/Texts";
+export { MainText, Title } from "./Texts/Texts";

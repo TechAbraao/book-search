@@ -1,4 +1,4 @@
-import { Button } from "@/components/Buttons/Buttons";
+import { Button } from "@/components";
 
 const MainText = () => {
     return <section className="w-1/2 h-full flex flex-col items-left justify-center text-[#0A1E33] font-bold gap-6">
@@ -8,10 +8,21 @@ const MainText = () => {
             </h1>
             <p className="font-extralight w-3/4">Utilizar o Book Search como sua principal plataforma de pesquisa de livros oferece resultados rápidos e precisos, otimizando a experiência e satisfação do usuário.</p>
         </header>
-        <Button text={"Pesquisar"}/>
+        <Button text={"Pesquisar"} />
     </section>
 }
 
+interface TitleProps {
+    title: string
+}
+const Title = ({ title = "Nenhum título definido." }: TitleProps) => {
+    return <header>
+        <h1 className="text-[#0A1E33] font-bold text-4xl 
+                    w-full text-center p-4">{ title }</h1>
+    </header>
+}
+
 export {
-    MainText
+    MainText,
+    Title
 };
