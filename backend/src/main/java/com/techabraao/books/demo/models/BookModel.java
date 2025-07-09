@@ -1,6 +1,6 @@
 package com.techabraao.books.demo.models;
 
-import com.techabraao.books.demo.constants.Genders;
+import com.techabraao.books.demo.constants.enums.Genders;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,6 +26,7 @@ public class BookModel {
     @Column(name = "id", unique = true)
     private UUID id;
 
+    // --
     @Column(name = "title", nullable = false, length = 30)
     private String title;
 
@@ -40,6 +41,7 @@ public class BookModel {
 
     @Column(name = "description", nullable = false, length = 300)
     private String description;
+    // --
 
     @CreatedDate
     @Column(name = "creation_date", nullable = false)

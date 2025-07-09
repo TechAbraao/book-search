@@ -1,4 +1,4 @@
-package com.techabraao.books.demo.constants;
+package com.techabraao.books.demo.constants.enums;
 
 public enum Genders {
     FICTION,

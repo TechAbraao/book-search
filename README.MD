@@ -2,8 +2,8 @@
 
 ## 💡 Technologies
 <section align="center">
-    <img alt="Static Badge" src="https://img.shields.io/badge/Java-grey?style=flat&logo=openjdk">
-    <img alt="Static Badge" src="https://img.shields.io/badge/Spring%20Boot-grey?style=flat&logo=springboot">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Java 21.0.7-grey?style=flat&logo=openjdk">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Spring%20Boot 3.5.3-grey?style=flat&logo=springboot">
     <img alt="Static Badge" src="https://img.shields.io/badge/Spring%20Web-grey?style=flat&logo=Spring%20Boot">
     <img alt="Static Badge" src="https://img.shields.io/badge/Spring%20Validation-grey?style=flat&logo=Spring%20Boot">
     <img alt="Static Badge" src="https://img.shields.io/badge/Spring%20Data%20JPA-grey?style=flat&logo=Spring%20Boot">
