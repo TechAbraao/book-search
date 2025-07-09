@@ -1,4 +1,4 @@
-import { BackgroundImage, GenderButton } from "@/components";
+import { BackgroundImage, GenderButton, Sidenav } from "@/components";
 import { DefaultLayout } from "@/layouts/DefaultLayouts";
 import { MainLayout, RecommendedBooks } from "@/layouts/HomePageLayouts";
 import { MainText, Title } from "@/components";

@@ -12,3 +12,6 @@ export { BackgroundImage } from "./Images/BackgroundImage";
 
 // Texts
 export { MainText, Title } from "./Texts/Texts";
+
+// Sidenav
+export { Sidenav } from "./Sidenav/Sidenav";    

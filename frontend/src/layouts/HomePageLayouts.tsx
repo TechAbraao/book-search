@@ -1,11 +1,17 @@
+import { Sidenav } from "@/components";
+
 interface LayoutProps {
     children: React.ReactNode;
 }
 
 const MainLayout = ({ children }: LayoutProps) => {
     return (
-        <section className="w-full h-2/3 p-18 bg-[#E8E7D5] flex">
-            {children}
+        
+        <section className="">
+            <Sidenav />
+            <aside className="w-full h-2/3 p-18 bg-[#E8E7D5] flex">
+                {children}
+            </aside>
         </section>
     )
 }
