@@ -1,4 +1,4 @@
-import { Button } from "@/components/Buttons";
+import { Button } from "@/components/Buttons/Buttons";
 
 const MainText = () => {
     return <section className="w-1/2 h-full flex flex-col items-left justify-center text-[#0A1E33] font-bold gap-6">

@@ -12,7 +12,7 @@ const MainLayout = ({ children }: LayoutProps) => {
 
 const RecommendedBooks = ({ children }: LayoutProps) => {
     return (
-        <section className="w-full h-1/2 p-4 bg-[#F9F9F9]">
+        <section className="w-full h-2/3 p-4 bg-[#F9F9F9]">
             {children}
         </section>
     )
