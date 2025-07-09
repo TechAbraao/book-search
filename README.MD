@@ -1,4 +1,4 @@
-<h1 align="center"> 📖 Book Search | Your favorite book is here! 📖 </h1> 
+<h1 align="center"> 📖 Book Search (Web Application) | Your favorite book is here! 📖 </h1> 
 
 ## 💡 Technologies
 <section align="center">

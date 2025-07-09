@@ -29,10 +29,13 @@ docker run --name booksearchdb \
 ```
 
 ### Entendendo alguns comandos Docker
-
+##### É necessário compreender que:
+##### -> 1. Uma imagem é uma receita do container, 
+##### -> 2. Um container é uma instância em execução da imagem.
 ```
 $ docker start <nome_do_container> # Vai inicializar o container docker caso exista
 $ docker stop <nome_do_container> # Vai pausar a instância do container docker
+$ docker run <imagem> # Inicializará um container Docker a partir de uma imagem. Baixará a imagem caso não exista.
 $ docker ps # Listará todos os containers em execução
 $ docker ps -a # A flag -a trás um diferencial, nessa instrução trará listado todos os containers pausados
 ```
