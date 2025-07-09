@@ -11,6 +11,7 @@
     <img alt="Static Badge" src="https://img.shields.io/badge/Hibernate-grey?style=flat&logo=Hibernate">
     <img alt="Static Badge" src="https://img.shields.io/badge/TypeScript-grey?style=flat&logo=TypeScript">
     <img alt="Static Badge" src="https://img.shields.io/badge/React-grey?style=flat&logo=React">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Axios-grey?style=flat&logo=Axios">
     <img alt="Static Badge" src="https://img.shields.io/badge/Next.js-grey?style=flat&logo=Next.js">
     <img alt="Static Badge" src="https://img.shields.io/badge/Vite-grey?style=flat&logo=Vite">
     <img alt="Static Badge" src="https://img.shields.io/badge/HTML5-grey?style=flat&logo=HTML5">
@@ -18,6 +19,7 @@
     <img alt="Static Badge" src="https://img.shields.io/badge/Docker-grey?style=flat&logo=Docker">
     <img alt="Static Badge" src="https://img.shields.io/badge/CircleCI-grey?style=flat&logo=CircleCI">
     <img alt="Static Badge" src="https://img.shields.io/badge/PostgreSQL-grey?style=flat&logo=PostgreSQL">
+    <img alt="Static Badge" src="https://img.shields.io/badge/pgAdmin-grey?style=flat&logo=PostgreSQL">
     <img alt="Static Badge" src="https://img.shields.io/badge/Postman-grey?style=flat&logo=Postman">
     <img alt="Static Badge" src="https://img.shields.io/badge/Yaml-grey?style=flat&logo=yaml">
 </section>

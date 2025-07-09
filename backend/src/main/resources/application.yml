@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: Book Search API REST
+  datasource:
+    url: jdbc:postgresql://localhost:5432/booksearch
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
