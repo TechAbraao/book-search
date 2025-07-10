@@ -12,10 +12,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-@Table(
-        name = "book",
-        schema = "public"
-)
+@Table(name = "books", schema = "public")
 @Getter
 @Setter
 @EntityListeners(AuditingEntityListener.class)
@@ -44,10 +41,10 @@ public class BookModel {
     // --
 
     @CreatedDate
-    @Column(name = "creation_date", nullable = false)
+    @Column(name = "created_at", nullable = false)
     private LocalDateTime creationDate;
 
     @LastModifiedDate
-    @Column(name = "modified_date", nullable = false)
+    @Column(name = "updated_at", nullable = false)
     private LocalDateTime modifiedDate;
 }

@@ -1,9 +1,10 @@
 package com.techabraao.books.demo.controllers;
 
 import com.techabraao.books.demo.dto.ApiResponse;
+import com.techabraao.books.demo.dto.ApiResponseError;
 import com.techabraao.books.demo.dto.BookDTO;
-import com.techabraao.books.demo.repository.BookRepository;
 import com.techabraao.books.demo.services.BookService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,22 +20,29 @@ public class BookController {
     public final BookService service;
 
     @GetMapping
-    public ResponseEntity<ApiResponse<List<BookDTO>>> allBooks() {
-        long total = service.count();
-        List<BookDTO> allBooks = service.listAllBooks();
+    public ResponseEntity<?> allBooks() {
+        try {
+            long total = service.count();
+            List<BookDTO> allBooks = service.listAllBooks();
 
-        ApiResponse<List<BookDTO>> response = new ApiResponse<>(
-                "Books fetched successfully.",
+            ApiResponse<List<BookDTO>> response = new ApiResponse<>(
+                    "Books fetched successfully.",
                     HttpStatus.OK.value(),
                     total,
                     allBooks
-        );
+            );
 
-        return ResponseEntity.ok(response);
+            return ResponseEntity.ok(response);
+        } catch (Exception error) {
+            ApiResponseError responseError = ApiResponseError.badRequest(error.getMessage());
+            return ResponseEntity
+                    .status(HttpStatus.BAD_REQUEST)
+                    .body(responseError);
+        }
     }
 
     @PostMapping
-    public ResponseEntity<ApiResponse<BookDTO>> addBook(@RequestBody BookDTO requestBook) {
+    public ResponseEntity<ApiResponse<BookDTO>> addBook(@RequestBody @Valid BookDTO requestBook) {
         BookDTO book = new BookDTO(requestBook.title(), requestBook.author(), requestBook.publisher(),
                 requestBook.gender(),
                 requestBook.description()
