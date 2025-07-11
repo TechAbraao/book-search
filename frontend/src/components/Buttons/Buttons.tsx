@@ -1,24 +1,23 @@
+'use client'
+import { useRouter } from 'next/navigation'
 import { styles } from "./styles/button.styles";
 
 interface ButtonProps {
-    text: string;
+  text?: string
+  href?: string
 }
 
-const Button = ({ text = "Default" }: ButtonProps) => {
-    return (
-        <button className="bg-[#E6C32F] w-66 text-white px-4 py-3
-         hover:bg-blue-600 transition duration-300 cursor-pointer">
-            {text}
-        </button>
-    )
+const Button = ({ text = "Default", href = "/" }: ButtonProps) => {
+  const router = useRouter()
+  const handleClick = () => {
+    if (href) { router.push(href) }
+  }
+
+  return (<button onClick={handleClick} className={styles.secondaryButton}>{text}</button>)
 }
 
 const GenderButton = ({ text = "Default" }: ButtonProps) => {
-    return (
-        <button className={styles.primaryButton}>
-            {text}
-        </button>
-    );
+    return (<button className={styles.primaryButton}>{text}</button>);
 };
 
 

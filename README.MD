@@ -7,12 +7,13 @@
     <img alt="Static Badge" src="https://img.shields.io/badge/Spring%20Web-grey?style=flat&logo=Spring%20Boot">
     <img alt="Static Badge" src="https://img.shields.io/badge/Spring%20Validation-grey?style=flat&logo=Spring%20Boot">
     <img alt="Static Badge" src="https://img.shields.io/badge/Spring%20Data%20JPA-grey?style=flat&logo=Spring%20Boot">
+        <img alt="Static Badge" src="https://img.shields.io/badge/Spring Security-grey?style=flat&logo=Spring%20Boot">
     <img alt="Static Badge" src="https://img.shields.io/badge/JUNIT-grey?style=flat&logo=junit5">
     <img alt="Static Badge" src="https://img.shields.io/badge/Hibernate-grey?style=flat&logo=Hibernate">
     <img alt="Static Badge" src="https://img.shields.io/badge/TypeScript-grey?style=flat&logo=TypeScript">
     <img alt="Static Badge" src="https://img.shields.io/badge/React-grey?style=flat&logo=React">
     <img alt="Static Badge" src="https://img.shields.io/badge/Axios-grey?style=flat&logo=Axios">
-    <img alt="Static Badge" src="https://img.shields.io/badge/Next.js-grey?style=flat&logo=Next.js">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Next.js 15.3.5-grey?style=flat&logo=Next.js">
     <img alt="Static Badge" src="https://img.shields.io/badge/Vite-grey?style=flat&logo=Vite">
     <img alt="Static Badge" src="https://img.shields.io/badge/HTML5-grey?style=flat&logo=HTML5">
     <img alt="Static Badge" src="https://img.shields.io/badge/TailwindCSS-grey?style=flat&logo=TailwindCSS">

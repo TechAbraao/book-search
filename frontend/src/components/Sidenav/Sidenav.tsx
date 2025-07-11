@@ -11,10 +11,9 @@ const Sidenav = () => {
                     </li>
                 </ul>
             </section>
-            <section className="flex items-center jus
-            tify-center gap-4 w-1/3 pl-6 pr-6">
-                <Button text={"Login"}/>
-                <Button text={"Registrar-se"}/>
+            <section className="flex items-center justify-center gap-4 w-1/3 pl-6 pr-6">
+                <Button text={"Login"} href={"/auth/login"}/>
+                <Button text={"Registrar-se"} href={"/auth/register"}/>
             </section>
         </nav>
     )
