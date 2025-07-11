@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import axios from "axios";
+import { registerUser } from "@/services/user.service";
 
 const LoginForm = () => {
     return (
@@ -26,8 +27,8 @@ const RegisterForm = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3001/api/register", form);
-            console.log("Cadastro feito com sucesso!", response.data);
+            const data = await registerUser(form)
+            console.log("Cadastro feito com sucesso!", data);
         } catch (error) {
             console.error("Erro ao cadastrar:", error);
         }
