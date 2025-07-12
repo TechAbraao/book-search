@@ -5,12 +5,9 @@ import com.techabraao.books.demo.repository.UsersRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import java.util.Optional;
-
 @Component
 @RequiredArgsConstructor
 public class UsersValidator {
-
     private final UsersRepository repository;
 
     /**

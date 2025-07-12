@@ -5,6 +5,7 @@ import com.techabraao.books.demo.dto.ResponseErrorList;
 import com.techabraao.books.demo.dto.ErrorFields;
 import com.techabraao.books.demo.dto.response.ResponseError;
 import com.techabraao.books.demo.exceptions.DuplicateDataException;
+import com.techabraao.books.demo.exceptions.PasswordsNotMatchException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.FieldError;
@@ -66,4 +67,13 @@ public class GlobalExceptionHandler {
         return new ResponseError(status, message, error);
     }
 
+    @ExceptionHandler(PasswordsNotMatchException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ResponseError handlePasswordsNotMatchException(PasswordsNotMatchException e) {
+        int status = HttpStatus.BAD_REQUEST.value();
+        String message = "The two passwords do not match. Please check and try again.";
+        String error = e.getMessage();
+
+        return new ResponseError(status, message, error);
+    }
 }
