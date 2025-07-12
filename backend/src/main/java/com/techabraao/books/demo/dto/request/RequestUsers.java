@@ -28,8 +28,6 @@ public record RequestUsers(
         return user;
     }
     public UsersDTO toUserDTO() {
-        UsersDTO userDTO = new UsersDTO(username, email);
-
-        return userDTO;
+        return new UsersDTO(username, email);
     }
 }

@@ -6,6 +6,6 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class UsersDTO {
-    private String name;
+    private String username;
     private String email;
 }

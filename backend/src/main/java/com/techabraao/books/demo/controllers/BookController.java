@@ -1,8 +1,8 @@
 package com.techabraao.books.demo.controllers;
 
 import com.techabraao.books.demo.dto.ApiResponse;
-import com.techabraao.books.demo.dto.ApiResponseError;
 import com.techabraao.books.demo.dto.BookDTO;
+import com.techabraao.books.demo.dto.ResponseErrorList;
 import com.techabraao.books.demo.services.BookService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -10,7 +10,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/books")
@@ -34,7 +33,7 @@ public class BookController {
 
             return ResponseEntity.ok(response);
         } catch (Exception error) {
-            ApiResponseError responseError = ApiResponseError.badRequest(error.getMessage());
+            ResponseErrorList responseError = ResponseErrorList.badRequest(error.getMessage());
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
                     .body(responseError);

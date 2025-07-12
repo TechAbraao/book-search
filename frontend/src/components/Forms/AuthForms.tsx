@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from "react";
-import axios from "axios";
 import { registerUser } from "@/services/user.service";
 
 const LoginForm = () => {
