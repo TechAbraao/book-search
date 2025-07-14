@@ -2,6 +2,11 @@ spring:
   application:
     name: Book Search API REST
 
+  security:
+    user:
+      name: TechAbraao
+      password: admin
+
   datasource:
     url: jdbc:postgresql://localhost:5432/booksearch
     username: postgres

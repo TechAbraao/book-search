@@ -19,11 +19,11 @@ public record RequestUsers(
         @NotBlank(message = "The confirm password field is required")
         String confirmPassword
 ) {
-    public UsersModel toUser() {
+    public UsersModel toUser(String hashedPassword) {
         UsersModel user = new UsersModel();
         user.setUsername(username);
         user.setEmail(email);
-        user.setPassword(password);
+        user.setPassword(hashedPassword);
 
         return user;
     }
