@@ -5,7 +5,7 @@ import com.techabraao.books.demo.models.UsersModel;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
-public record RequestUsers(
+public record RequestRegisterUser(
         @NotBlank(message = "The username field is required")
         String username,
 

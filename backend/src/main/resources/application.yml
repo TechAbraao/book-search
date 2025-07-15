@@ -4,7 +4,7 @@ spring:
 
   security:
     user:
-      name: TechAbraao
+      name: admin
       password: admin
 
   datasource:

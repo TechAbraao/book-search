@@ -5,7 +5,9 @@ import com.techabraao.books.demo.dto.ResponseErrorList;
 import com.techabraao.books.demo.dto.ErrorFields;
 import com.techabraao.books.demo.dto.response.ResponseError;
 import com.techabraao.books.demo.exceptions.DuplicateDataException;
+import com.techabraao.books.demo.exceptions.EmailNotFoundException;
 import com.techabraao.books.demo.exceptions.PasswordsNotMatchException;
+import org.hibernate.validator.constraints.Email;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.FieldError;
@@ -72,6 +74,16 @@ public class GlobalExceptionHandler {
     public ResponseError handlePasswordsNotMatchException(PasswordsNotMatchException e) {
         int status = HttpStatus.BAD_REQUEST.value();
         String message = "The two passwords do not match. Please check and try again.";
+        String error = e.getMessage();
+
+        return new ResponseError(status, message, error);
+    }
+
+    @ExceptionHandler(EmailNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseError handleEmailNotFoundException(EmailNotFoundException e) {
+        int status = HttpStatus.NOT_FOUND.value();
+        String message = "There is no record of this email. Please try again with a different email address";
         String error = e.getMessage();
 
         return new ResponseError(status, message, error);

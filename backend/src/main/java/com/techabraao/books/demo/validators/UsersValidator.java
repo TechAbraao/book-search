@@ -12,8 +12,16 @@ public class UsersValidator {
 
     /**
      * Verifica se um usuário já existe no banco de dados com o email e nome fornecidos.
-    **/
+     **/
     public Boolean verifyUserExists(UsersDTO user) {
         return repository.existsByEmail(user.getEmail()) || repository.existsByUsername(user.getUsername());
     }
+
+    /**
+     * Verifica se o e-mail já existe no banco de dados com o email fornecido.
+     **/
+    public Boolean verifyEmailExists(UsersDTO user) {
+        return repository.existsByEmail(user.getEmail());
+    }
+
 }
