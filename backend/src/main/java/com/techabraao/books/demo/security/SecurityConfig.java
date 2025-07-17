@@ -1,4 +1,4 @@
-package com.techabraao.books.demo.configs;
+package com.techabraao.books.demo.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
