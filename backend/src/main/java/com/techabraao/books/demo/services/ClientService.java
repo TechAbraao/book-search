@@ -1,7 +1,7 @@
 package com.techabraao.books.demo.services;
 
 import com.techabraao.books.demo.models.ClientModel;
-import com.techabraao.books.demo.repository.ClienteRepository;
+import com.techabraao.books.demo.repository.ClientRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ClientService {
 
-    private final ClienteRepository repository;
+    private final ClientRepository repository;
 
     public ClientModel save(ClientModel client) {
         return repository.save(client);

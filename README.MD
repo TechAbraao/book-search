@@ -29,3 +29,16 @@
     <img alt="Static Badge" src="https://img.shields.io/badge/HTML5-grey?style=flat&logo=HTML5">
     <img alt="Static Badge" src="https://img.shields.io/badge/TailwindCSS-grey?style=flat&logo=TailwindCSS">
 </section>
+
+## API Contract and Definitions
+### Endpoints
+
+#### Books
+Endpoints to manage and retrieve information about books in the system.
+| Method | URL           | Description              |
+| ------ | ------------- | ------------------------ |
+| GET    | `/api/books`  | List all books           |
+| POST   | `/api/decks`  | Add a new deck           |
+
+
+

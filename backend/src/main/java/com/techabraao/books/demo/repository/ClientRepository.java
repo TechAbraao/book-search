@@ -5,7 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
 
-public interface ClienteRepository extends JpaRepository<ClientModel, UUID> {
-
+public interface ClientRepository extends JpaRepository<ClientModel, UUID> {
     ClientModel findByClientId(String clientId);
 }
