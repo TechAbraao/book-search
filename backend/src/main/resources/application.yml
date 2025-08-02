@@ -6,6 +6,8 @@ spring:
     user:
       name: admin
       password: admin
+    token:
+      secret: my-secret-key
 
   datasource:
     url: jdbc:postgresql://localhost:5432/booksearch

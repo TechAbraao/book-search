@@ -2,6 +2,7 @@ package com.techabraao.books.demo.repository;
 
 import com.techabraao.books.demo.models.UsersModel;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
@@ -14,4 +15,5 @@ public interface UsersRepository extends JpaRepository<UsersModel, UUID> {
     boolean existsByEmail(String email);
     boolean existsByUsername(String username);
     Boolean existsByEmailAndUsername(String email, String name);
+    Optional<UserDetails> findByEmail(String email);
 }
