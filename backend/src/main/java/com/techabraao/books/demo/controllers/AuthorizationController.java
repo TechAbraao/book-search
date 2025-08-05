@@ -16,6 +16,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,27 +29,26 @@ public class AuthorizationController {
 
     private final UsersService usersService;
     private final UsersValidator usersValidator;
-    private final PasswordValidator passwordValidator;
     private final AuthenticationManager authenticationManager;
     private final TokenService tokenService;
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody @Valid RequestLoginUser requestUser) {
         try {
-            var usernamePassword = new UsernamePasswordAuthenticationToken(
-                    requestUser.email(), requestUser.password());
-
-            var auth = this.authenticationManager.authenticate(usernamePassword);
-            var token = tokenService.generateToken((UsersModel) auth.getPrincipal());
-
-            return ResponseEntity.ok(new LoginResponseDTO(token));
-        } catch (Exception error) {
+            var usernamePassword = new UsernamePasswordAuthenticationToken(requestUser.email(), requestUser.password());
+            try {
+                var auth = this.authenticationManager.authenticate(usernamePassword);
+                var token = tokenService.generateToken((UsersModel) auth.getPrincipal());
+                return ResponseEntity.ok(new LoginResponseDTO(token));
+            } catch (BadCredentialsException exception) {
+                return ResponseEntity.notFound().build();
+            }
+        } catch (Exception exception) {
             return ResponseEntity
                     .status(HttpStatus.UNAUTHORIZED)
-                    .body(Map.of("error", "Invalid credentials"));
+                    .body(Map.of("error", exception.getMessage()));
         }
     }
-
 
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody @Valid RequestRegisterUser requestUser) {

@@ -1,0 +1,33 @@
+services:
+  postgres:
+    image: postgres:16.3
+    container_name: booksearch-database-postgres 
+    ports:
+      - "${DATABASE_PORT}:${DATABASE_PORT}"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: booksearchdatabase
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - book-search-network
+    
+    pgadmin:
+    image: dpage/pgadmin4
+    container_name: email-sender-pgadmin
+    ports:
+      - "${PGADMIN_HOST}:${PGADMIN_PORT}"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+    depends_on:
+      - postgres
+    networks:
+      - book-search-network
+
+volumes:
+  pgdata:
+
+networks:
+  book-search-network:

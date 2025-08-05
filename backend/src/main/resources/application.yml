@@ -7,7 +7,8 @@ spring:
       name: admin
       password: admin
     token:
-      secret: my-secret-key
+      secret: mySecretSignatureToken
+      issuer: bookSearch
 
   datasource:
     url: jdbc:postgresql://localhost:5432/booksearch
