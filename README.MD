@@ -8,14 +8,12 @@
     <img alt="Static Badge" src="https://img.shields.io/badge/Spring%20Validation-grey?style=flat&logo=Spring%20Boot">
     <img alt="Static Badge" src="https://img.shields.io/badge/Spring%20Data%20JPA-grey?style=flat&logo=Spring%20Boot">
     <img alt="Static Badge" src="https://img.shields.io/badge/Spring Security-grey?style=flat&logo=Spring%20Boot">
-     <img alt="Static Badge" src="https://img.shields.io/badge/Spring Authorization Server-grey?style=flat&logo=Spring%20Boot">
-    <img alt="Static Badge" src="https://img.shields.io/badge/JUNIT-grey?style=flat&logo=junit5">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Lombok-grey?style=flat&logo=openjdk">
     <img alt="Static Badge" src="https://img.shields.io/badge/Hibernate-grey?style=flat&logo=Hibernate">
     <img alt="Static Badge" src="https://img.shields.io/badge/Docker-grey?style=flat&logo=Docker">
     <img alt="Static Badge" src="https://img.shields.io/badge/PostgreSQL-grey?style=flat&logo=PostgreSQL">
     <img alt="Static Badge" src="https://img.shields.io/badge/pgAdmin-grey?style=flat&logo=PostgreSQL">
     <img alt="Static Badge" src="https://img.shields.io/badge/Postman-grey?style=flat&logo=Postman">
-    <img alt="Static Badge" src="https://img.shields.io/badge/OAuth 2.0-grey?style=flat&logo=JSON">
     <img alt="Static Badge" src="https://img.shields.io/badge/Yaml-grey?style=flat&logo=yaml">
 </section>
 

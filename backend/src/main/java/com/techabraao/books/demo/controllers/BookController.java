@@ -60,5 +60,4 @@ public class BookController {
                 .status(HttpStatus.CREATED)
                 .body(response);
     }
-
 }
