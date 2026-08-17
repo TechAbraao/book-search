@@ -8,9 +8,9 @@ spring:
       password: admin
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/booksearch
+    url: jdbc:postgresql://localhost:5432/books_db
     username: postgres
-    password: postgres
+    password: secret
     driver-class-name: org.postgresql.Driver
 
   jpa:
