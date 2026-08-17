@@ -5,6 +5,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
 public record RequestLoginUser(
+
         @NotBlank(message = "The email field is required")
         @Email(message = "The email must be in a valid format (e.g. user@example.com)")
         String email,
@@ -13,6 +14,6 @@ public record RequestLoginUser(
         String password
 ) {
     public UsersDTO toUserDTO() {
-        return new UsersDTO(email, email);
+        return new UsersDTO(email, password);
     }
 }
